@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas de JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 p-6">
+
+    <h1 class="text-3xl font-bold text-center mb-6">Prácticas de JavaScript</h1>
+
+    <!-- Contenedor principal con grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Práctica 1 -->
+        <div class="practica bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Práctica 1: Número par o impar</h2>
+            <label for="numero-par" class="block mb-2 font-medium">Introduce un número:</label>
+            <input 
+                type="number" 
+                id="numero-par" 
+                class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                placeholder="Escribe un número"
+            >
+            <button 
+                onclick="verificarParImpar()" 
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+            >
+                Verificar
+            </button>
+            <p id="resultado-par" class="mt-4 text-lg font-medium text-gray-700"></p>
+        </div>
+
+        <!-- Práctica 2 -->
+        <div class="practica bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Práctica 2: Mayor de tres números</h2>
+            <label for="num1" class="block mb-2 font-medium">Introduce un número:</label>
+            <input type="number" id="num1" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un número">
+            <label for="num2" class="block mb-2 font-medium">Introduce un segundo número:</label>
+            <input type="number" id="num2" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un número">
+            <label for="num3" class="block mb-2 font-medium">Introduce un tercer número:</label>
+            <input type="number" id="num3" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un número">
+            <button onclick="mayordetres()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Verificar</button>
+            <p id="res1" class="mt-4 text-lg font-medium text-gray-700"></p>
+        </div>
+
+        <!-- Práctica 3 -->
+        <div class="practica bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Práctica 3: Calificaciones</h2>
+            <label for="calif1" class="block mb-2 font-medium">Introduce un número:</label>
+            <input type="number" id="calif1" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un número">
+            <button onclick="calificaciones()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Verificar</button>
+            <p id="res2" class="mt-4 text-lg font-medium text-gray-700"></p>
+        </div>
+
+            <!-- Práctica 4 -->
+        <div class="practica bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Práctica 4: Rango</h2>
+            <label for="dato" class="block mb-2 font-medium">Introduce un número:</label>
+            <input type="number" id="dato" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un número">
+            <button onclick="rango()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Verificar</button>
+            <p id="res3" class="mt-4 text-lg font-medium text-gray-700"></p>
+        </div>
+
+             <!-- Práctica 5 -->
+        <div class="practica bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Práctica 5: Fibonacci</h2>
+            <label for="fibo1" class="block mb-2 font-medium">Introduce un número:</label>
+            <input type="number" id="fibo1" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un número">
+            <button onclick="fibo()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Verificar</button>
+            <p id="res4" class="mt-4 text-lg font-medium text-gray-700"></p>
+        </div>
+
+            <!-- Práctica 6 -->
+        <div class="practica bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Práctica 6: Palindromo</h2>
+            <label for="pal1" class="block mb-2 font-medium">Introduce un número:</label>
+            <input type="number" id="pal1" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un número">
+            <button onclick="palindromo()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Verificar</button>
+            <p id="res5" class="mt-4 text-lg font-medium text-gray-700"></p>
+        </div>
+
+            <!-- Práctica 7 -->
+        <div class="practica bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Práctica 7: Verificar Anagramas</h2>
+            <label for="palabra1" class="block mb-2 font-medium">Primera palabra:</label>
+            <input 
+                type="text" 
+                id="palabra1" 
+                class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                placeholder="Escribe la primera palabra"
+            >
+            <label for="palabra2" class="block mb-2 font-medium">Segunda palabra:</label>
+            <input 
+                type="text" 
+                id="palabra2" 
+                class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                placeholder="Escribe la segunda palabra"
+            >
+            <button 
+                onclick="verificarAnagramas()" 
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+            >Verificar
+            </button>
+            <p id="resultado-anagramas" class="mt-4 text-lg font-medium text-gray-700"></p>
+        </div>
+
+
+    </div>
+
+    <script src="practicas.js"></script> <!-- Archivo externo -->
+</body>
+</html>
